@@ -1,0 +1,17 @@
+name: Test GitHub Action
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Display email
+        run: echo "This step contains my email: 23ds2000055@ds.study.iitm.ac.in"
